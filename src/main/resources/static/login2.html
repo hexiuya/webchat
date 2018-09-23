@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="./js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript">
+		function login(){
+			var loginname = $("#loginname").val();
+			window.location.href = "chat2.html?loginname=" + loginname;
+		}
+		</script>
+	</head>
+	<body>
+	loginname:<input name="loginname" id="loginname">
+	<input type="button" value="login" onclick="login()">
+	</body>
+</html>

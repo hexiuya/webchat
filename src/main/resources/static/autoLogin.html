@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script src="./js/jquery-1.9.1.min.js"></script>
+		<script src="./js/autoLogin.js"></script>
+		<script type="text/javascript">
+		$(function(){
+			login();
+		});
+		
+		function login(){
+			var sub_url;
+			var n = location.href.match(/^(http[s]?:\/\/.*)\/[^\/]*/);
+			
+			if (n && n.length == 2) {
+				url_base = n[1];
+			}
+			
+			var loginname = getParam("loginname");
+			var faceName = getParam("faceName");
+			
+			
+			var url = url_base + '/login';
+			var params = {
+					loginname:loginname
+					};
+// 			$.post(url, params, function(resp){
+// 				console.log(resp);			
+// 				window.location.href = "chat.html?loginname=" + loginname;
+// 			}, 'json');
+			
+			$.ajax({
+				url:url_base + '/login',
+				data:{
+					loginname:loginname
+				},
+				type: 'POST',
+				success:function(data){
+					console.log(data);			
+					window.location.href = "autoChat.html?loginname=" + loginname + "&faceName=" + faceName;
+					//window.open("chat.html?loginname=" + loginname);
+// 					var temp_window = window.open();
+// 					temp_window.location = "chat.html?loginname=" + loginname;
+		        }
+			});
+			
+		}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

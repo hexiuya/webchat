@@ -1,0 +1,50 @@
+1.1.github上下载icomet(版本：master)
+2.github上下载ssdb(版本：stable-1.8.2)
+3.github上下载icomet-demos(版本：update_client),里面有php和android两种app的代码
+4.download xampp or appserv that can run on windows system , then install apache , php 5.7 (mysql). 
+5.在linux上安装icomet,
+   Compile : 
+   wget --no-check-certificate https://github.com/ideawu/icomet/archive/master.zip
+   unzip master.zip
+   cd icomet-master/
+   make
+   
+   Run :
+   ./icomet-server icomet.conf
+   # or run as daemon
+   ./icomet-server -d icomet.conf
+   # stop
+   ./icomet-server icomet.conf -s stop
+6.在linux上安装ssdb
+   Compile and Install :
+   $ wget --no-check-certificate https://github.com/ideawu/ssdb/archive/master.zip
+   $ unzip master
+   $ cd ssdb-master
+   $ make
+   $ #optional, install ssdb in /usr/local/ssdb
+   $ sudo make install
+   
+   Run :
+   # start master
+   $ ./ssdb-server ssdb.conf
+   
+   # or start as daemon
+   $ ./ssdb-server -d ssdb.conf
+   
+   # ssdb command line
+   $ ./tools/ssdb-cli -p 8888
+   
+   # stop ssdb-server
+   $ ./ssdb-server ssdb.conf -s stop
+    # for older version
+   $ kill `cat ./var/ssdb.pid`
+   
+7.关闭linux 操作系统的防火墙
+8.修改icomet.conf内容，主要是增加ip白名单，开启auth: token.
+9.修改ssdb.conf内容，主要是增加ip白名单   
+10.在linux上使用curl命令验证icomet是否安装成功
+    curl -v "http://127.0.0.1:8100/sub?cname=12&seq=1"
+    # open another terminal
+    curl -v "http://127.0.0.1:8000/push?cname=12&content=hi"
+11.在linux上验证ssdb是否安装成功
+    $ ./tools/ssdb-cli -p 8888

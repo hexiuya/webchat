@@ -1,0 +1,13 @@
+com/blackjade/webchat/bean/Data.class
+com/blackjade/webchat/bean/ResponseCommon.class
+com/blackjade/webchat/util/SSDBClient.class
+com/blackjade/webchat/bean/Constant.class
+com/blackjade/webchat/bean/ResponseContact.class
+com/blackjade/webchat/bean/TalkMessage.class
+com/blackjade/webchat/bean/ResponseMessage.class
+com/blackjade/webchat/bean/DataMessage.class
+com/blackjade/webchat/bean/PushMessage.class
+com/blackjade/webchat/controller/ChatController.class
+com/blackjade/webchat/bean/DataContact.class
+com/blackjade/webchat/bean/ResponseObject.class
+com/blackjade/webchat/WebchatApplication.class
