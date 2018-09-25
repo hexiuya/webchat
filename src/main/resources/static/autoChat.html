@@ -159,7 +159,9 @@
 				//sub_url = 'http://' + '192.168.236.129' + ':8100/poll'
 // 				sub_url = 'http://' + 'localhost' + ':8110/poll'
 // 				sub_url = 'http://' + '192.168.1.7' + ':8110/poll'
-				sub_url = pollUrl;
+				var host = location.host;
+				sub_url = 'http://' + host + '/poll';
+// 				sub_url = pollUrl;
 			}
 			
 // 			$(function(){
