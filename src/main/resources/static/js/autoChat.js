@@ -6,3 +6,30 @@ function getParam(paramName) {
     } 
     return paramValue == "" && (paramValue = null), paramValue 
 }
+
+showFaceName();
+
+function showLoginName(){
+	
+	var loginname = getParam("loginname");
+	
+	//$("#loginname").val(loginname);
+	
+	//var element = document.getElementById("loginname");
+	
+	//element.innerHTML = "welcome : " + loginname;
+	
+	var loginname = document.getElementById("loginname");
+	
+	loginname.innerHTML = loginname;
+}
+
+function showFaceName(){
+	var faceName = getParam("faceName");
+	
+//	var faceName = document.getElementById("faceName");
+//	
+//	faceName.innerHTML = faceName;
+	
+	$("#faceName").html(faceName);
+}

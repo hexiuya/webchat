@@ -30,11 +30,11 @@
 			
 			#chat{
 				float: left;
-				margin-left: 10px;
+/* 				margin-left: 10px; */
 				padding: 4px;
 				border: 1px solid #000;
 				background-color: darkturquoise;
-				width: 300px;
+				width: 270px;
 			}
 			#chat .talkwith .user{
 				font-weight: bold;
@@ -104,11 +104,11 @@
 			
 </style>
 	</head>
-	<body>
-	    <div>
-	        <div id="loginname" style="color: black"></div>
+	<body style="margin:0px;">
+<!-- 	    <div> -->
+<!-- 	        <div id="loginname" style="color: black"></div> -->
 	       
-	    </div>
+<!-- 	    </div> -->
 	    
 	    
 	    <div id="contacts" style="display:none">
@@ -124,7 +124,7 @@
 			    
 				<div class="talkwith">
 					<!-- Logged in as <b id="uname"></b>,  -->
-					chat with <span class="user"></span>:
+					chat with : <span class="user" id="faceName"></span>
 				</div>
 				 
 				<div class="messages_div"><div class="messages"></div></div>
@@ -141,7 +141,7 @@
 	
 	<script src="./js/icomet.js"></script>
 		<script src="./js/jquery-1.9.1.min.js"></script>
-		<script src="./js/chat.js"></script>
+		<script src="./js/autoChat.js"></script>
 		<script src="./js/json2.js"></script>
 		<script src="./js/common.js"></script>
 		<script type="text/javascript">
